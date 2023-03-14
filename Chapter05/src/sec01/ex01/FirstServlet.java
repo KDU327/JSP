@@ -17,6 +17,11 @@ public class FirstServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("doGet 메서드 호출");
 	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("doPost 메서드 호출");
+	}
 
 	@Override
 	public void destroy() {
