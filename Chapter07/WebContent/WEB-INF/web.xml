@@ -49,4 +49,14 @@
     <servlet-name>MemberServlet4</servlet-name>
     <url-pattern>/Member4</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MemberServlet5</display-name>
+    <servlet-name>MemberServlet5</servlet-name>
+    <servlet-class>sec02.ex03.MemberServlet5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberServlet5</servlet-name>
+    <url-pattern>/Member5</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,4 +1,4 @@
-package sec02.ex02;
+package sec02.ex03;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -35,10 +35,10 @@ public class MemberDAO {
       pstmt = con.prepareStatement(query);
       ResultSet rs = pstmt.executeQuery(query);
       while (rs.next()) {
-        String id = rs.getString("id");
-        String pwd = rs.getString("pwd");
-        String name = rs.getString("name");
-        String email = rs.getString("email");
+        String id     = rs.getString("id");
+        String pwd    = rs.getString("pwd");
+        String name   = rs.getString("name");
+        String email  = rs.getString("email");
         Date joinDate = rs.getDate("joinDate");
         MemberVO vo = new MemberVO();
         vo.setId(id);
@@ -66,8 +66,8 @@ public class MemberDAO {
       String email = memberVO.getEmail();
       
       String query = "insert into t_member";
-      query += "(id,pwd,name,email)";
-      query += "values(?,?,?,?)";
+      query += " (id,pwd,name,email)";
+      query += " values(?,?,?,?)";
       System.out.println("prepareStatement: " + query);
       
       pstmt = con.prepareStatement(query);
@@ -78,6 +78,21 @@ public class MemberDAO {
       pstmt.executeUpdate();
       pstmt.close();
     } catch  (Exception e) {
+      e.printStackTrace();
+    }
+  }
+  
+  public void delMember(String id) {
+    try {
+      con = dataFactory.getConnection();
+      
+      String query = "delete from t_member" + " where id=?";
+      System.out.println("prepareStatement:" + query);
+      pstmt = con.prepareStatement(query);
+      pstmt.setString(1,  id);
+      pstmt.executeUpdate();
+      pstmt.close();
+    } catch (Exception e) {
       e.printStackTrace();
     }
   }
