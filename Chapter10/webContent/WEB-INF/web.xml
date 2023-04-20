@@ -68,4 +68,14 @@
     <filter-name>EncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginTestServlet</display-name>
+    <servlet-name>LoginTestServlet</servlet-name>
+    <servlet-class>sec04.ex01.LoginTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginTestServlet</servlet-name>
+    <url-pattern>/login2</url-pattern>
+  </servlet-mapping>
 </web-app>
