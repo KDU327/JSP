@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>include.jsp : ±ËµøøÌ</title>
+	</head>
+	<body>
+	  æ»≥Á«œººø‰. JSP ºÓ«Œ∏Ù Ω√¿€ ∫Œ∫–¿‘¥œ¥Ÿ. <br>
+	  <jsp:include page="duke_image.jsp">
+	    <jsp:param value="µ‡≈©" name="name"/>
+	    <jsp:param value="duke.png" name="imgName"/>
+	  </jsp:include>
+	  
+	  <br>
+	  JSP ºÓ«Œ∏Ù ≥° ∫Œ∫–¿‘¥œ¥Ÿ.
+	</body>
+</html>
